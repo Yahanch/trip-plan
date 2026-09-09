@@ -121,7 +121,34 @@
     font-size: 13px;
   }
 
-  /* 行李清單可勾選樣式 */
+  /* 美食清單與行李清單樣式 */
+  .food-category {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  }
+  .food-category h3 {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: #d9480f;
+    border-bottom: 2px solid #ffe8cc;
+    padding-bottom: 4px;
+  }
+  .food-item {
+    margin-bottom: 10px;
+    font-size: 13.5px;
+  }
+  .food-item:last-child {
+    margin-bottom: 0;
+  }
+  .food-name {
+    font-weight: bold;
+    color: #212529;
+  }
+
   .pack-box {
     background: #ffffff;
     border-radius: 8px;
@@ -172,9 +199,6 @@
     cursor: pointer;
     margin-top: 10px;
   }
-  .reset-btn:hover {
-    background-color: #e03131;
-  }
 </style>
 </head>
 <body>
@@ -182,11 +206,11 @@
 
 <div class="hero-header">
   <h1>🇰🇷 韓國首爾 6天5夜完整行程網頁指南</h1>
-  <p>🗓️ 出發日期：2026/09/17 (四) – 09/22 (二) | 附 Naver 地圖連結 & 可勾選儲存行李清單</p>
+  <p>🗓️ 出發日期：2026/09/17 (四) – 09/22 (二) | 附 Naver 地圖連結、口袋美食 & 可勾選行李清單</p>
 </div>
 
 <div class="hotel-box">
-  🏨 <b>全程住宿：磚石酒店 (Bricks Hotel / 브릭스호텔)</b> <a href="https://map.naver.com/p/search/%EB%B8%8C%EB%A6%AD%EC%8A%A4%ED%98%B8%ED%85%8C%EB%A5%B8" class="naver-btn" target="_blank">Naver Map</a><br>
+  🏨 <b>全程住宿：磚石酒店 (Bricks Hotel / 브릭스호텔)</b> <a href="https://naver.me/BricksHotel" class="naver-btn" target="_blank">Naver Map</a><br>
   📍 交通資訊：近地鐵 6 號線<b>鷹岩站 (610)</b> 1 號/2 號出口約 500m（步行約 7 分鐘）。
 </div>
 
@@ -201,27 +225,27 @@
   <ul class="timeline">
     <li class="timeline-item">
       <span class="time-badge">15:35 – 17:00</span>
-      <span class="item-title">抵達仁川機場 T1 <a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%B3%EA%B3%B0%ED%95%AD%201%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">抵達仁川機場 T1 <a href="https://naver.me/54KvTqG0" class="naver-btn" target="_blank">Naver Map</a></span>
       <p class="item-desc">入境＋領行李，搭 AREX 至孔德站轉乘 6 號線至鷹岩站。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">17:30 – 18:15</span>
-      <span class="item-title">🏨 磚石酒店 Check-in <a href="https://map.naver.com/p/search/%EB%B8%8C%EB%A6%AD%EC%8A%A4%ED%98%B8%ED%85%8C%EB%A5%B8" class="naver-btn" target="_blank">Naver Map</a></span>
-      <p class="item-desc">放置行李、稍作休息整理，準備出門吃晚餐。</p>
+      <span class="item-title">🏨 磚石酒店 Check-in</span>
+      <p class="item-desc">放置行李、稍作休息整理。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">18:30 – 19:30</span>
-      <span class="item-title">🍜 진주회관（晉州會館）<a href="https://map.naver.com/p/search/%EC%A2%8B%EC%A3%BC%ED%9A%8C%EA%B4%80" class="naver-btn" target="_blank">Naver Map</a></span>
-      <p class="item-desc">必點：콩국수（冷豆漿麵 ⭐⭐⭐⭐⭐）。</p>
+      <span class="item-title">🍜 진주회관（晉州會館）<a href="https://naver.me/x6JDFSkh" class="naver-btn" target="_blank">Naver Map</a></span>
+      <p class="item-desc">市廳站 201。必點：콩국수（冷豆漿麵 ⭐⭐⭐⭐⭐）。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">19:30 – 21:00</span>
-      <span class="item-title">🛍️ 明洞街區散步 <a href="https://map.naver.com/p/search/%EB%AA%85%EB%8F%99%EA%B1%B0%EB%A6%AC" class="naver-btn" target="_blank">Naver Map</a></span>
-      <p class="item-desc">換錢、逛 Olive Young。備選：<a href="https://map.naver.com/p/search/%EB%AA%85%EB%8F%99%EA%B5%90%EC%9E%90" class="naver-btn" target="_blank">明洞餃子 Naver Map</a>。</p>
+      <span class="item-title">🛍️ 明洞街區散步</span>
+      <p class="item-desc">換錢、逛 Olive Young。備選小吃：明洞餃子。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">21:30 – 23:30</span>
-      <span class="item-title">♨️ Spa Lei 女子汗蒸幕 <a href="https://map.naver.com/p/search/Spa%20Lei" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">♨️ Spa Lei 女子汗蒸幕</span>
       <p class="item-desc">泡澡、汗蒸，放鬆飛機產生的疲勞。</p>
     </li>
     <li class="timeline-item">
@@ -244,27 +268,27 @@
     </li>
     <li class="timeline-item">
       <span class="time-badge">10:00 – 11:00</span>
-      <span class="item-title">🥐 Artist Bakery 新沙店 <a href="https://map.naver.com/p/search/Artist%20Bakery" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🥐 Artist Bakery 新沙店</span>
       <p class="item-desc">早午餐：鹽可頌、貝果、咖啡。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">12:30 – 13:45</span>
-      <span class="item-title">🥘 신사전（新沙煎餅）<a href="https://map.naver.com/p/search/%EC%8B%A0%EC%82%AC%EC%A0%84" class="naver-btn" target="_blank">Naver Map</a></span>
-      <p class="item-desc">綜合煎餅、蜂巢米酒。</p>
+      <span class="item-title">🥘 신사전（新沙煎餅）<a href="https://naver.me/GtYkKNKb" class="naver-btn" target="_blank">Naver Map</a></span>
+      <p class="item-desc">新沙站 337。綜合煎餅、蜂蜜蜂巢米酒。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">14:00 – 16:00</span>
-      <span class="item-title">🛍️ 狎鷗亭羅德奧 <a href="https://map.naver.com/p/search/%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C%EB%8D%B0%EC%98%A4%EA%B1%B0%EB%A6%AC" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🛍️ 狎鷗亭羅德奧</span>
       <p class="item-desc">Galleria 百貨周邊、選物店、潮流品牌。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">16:30 – 18:30</span>
-      <span class="item-title">🛍️ 聖水洞 Pop-up 街區 <a href="https://map.naver.com/p/search/%EC%84%B1%EC%88%98%EB%8F%99%EC%B0%B8%EA%B1%B0%EB%A6%AC" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🛍️ 聖水洞 Pop-up 街區</span>
       <p class="item-desc">快閃店、咖啡廳。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">18:30 – 20:00</span>
-      <span class="item-title">🍚 난포（難浦 Nanpo）<a href="https://map.naver.com/p/search/%EB%82%9C%ED%8F%AC%20%EC%84%B1%EC%88%98" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🍚 난포（難浦 Nanpo 聖水店）</span>
       <p class="item-desc">大醬包飯、洗酵辛奇泡菜捲。</p>
     </li>
     <li class="timeline-item">
@@ -287,23 +311,24 @@
     </li>
     <li class="timeline-item">
       <span class="time-badge">08:30 – 09:30</span>
-      <span class="item-title">🥯 London Bagel Museum 安國 <a href="https://map.naver.com/p/search/London%20Bagel%20Museum%20Anguk" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🥯 London Bagel Museum 安國</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">10:30 – 13:00</span>
-      <span class="item-title">👘 韓服體驗 & 景福宮 <a href="https://map.naver.com/p/search/%EA%B2%BD%EB%B3%B5%EA%B6%81" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">👘 韓服體驗 & 景福宮</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">13:15 – 14:30</span>
-      <span class="item-title">🍜 체부동잔치집（體府洞宴會家）<a href="https://map.naver.com/p/search/%EC%B2%B4%EB%B6%80%EB%8F%99%EC%9E%94%EC%B9%91%EC%A7%91" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🍜 체부동잔치집（體府洞宴會家）<a href="https://naver.me/54KvTqG0" class="naver-btn" target="_blank">Naver Map</a></span>
+      <p class="item-desc">景福宮站 327。超級愛店！麵店、煎餅超級好吃 ⭐⭐⭐⭐⭐</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">14:30 – 16:30</span>
-      <span class="item-title">🌿 西村巷弄漫步 <a href="https://map.naver.com/p/search/%EC%84%9C%EC%B2%B3" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🌿 西村巷弄漫步</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">17:00 – 20:00</span>
-      <span class="item-title">🥢 廣藏市場 Food Hopping <a href="https://map.naver.com/p/search/%EA%B4%91%EC%9E%A5%EC%8B%9C%EC%9E%A5" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🥢 廣藏市場 Food Hopping</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">20:30</span>
@@ -325,20 +350,20 @@
     </li>
     <li class="timeline-item">
       <span class="time-badge">10:30 – 12:00</span>
-      <span class="item-title">🏯 德壽宮石牆路 <a href="https://map.naver.com/p/search/%EB%8D%95%EC%88%98%EA%B6%81" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🏯 德壽宮石牆路</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">13:30 – 15:30</span>
-      <span class="item-title">☕ 解放村 Rain Report <a href="https://map.naver.com/p/search/Rain%20Report%20Itaewon" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">☕ 解放村 Rain Report</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">16:00 – 18:00</span>
-      <span class="item-title">🛍️ 望遠市場 <a href="https://map.naver.com/p/search/%EB%A7%9B%EC%9B%90%EC%8B%9C%EC%9E%A5" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🛍️ 望遠市場</span>
       <p class="item-desc">6 號線直達望遠站！</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">18:00 – 20:30</span>
-      <span class="item-title">🌅 望遠漢江公園野餐 <a href="https://map.naver.com/p/search/%EB%A7%9B%EC%9B%90%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🌅 望遠漢江公園野餐</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">21:00</span>
@@ -360,19 +385,19 @@
     </li>
     <li class="timeline-item">
       <span class="time-badge">09:30 – 11:00</span>
-      <span class="item-title">⭐ Starfield Suwon 星空圖書館 <a href="https://map.naver.com/p/search/Starfield%20Suwon" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">⭐ Starfield Suwon 星空圖書館</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">12:15 – 12:30</span>
-      <span class="item-title">🥪 舍堂站輕食 <a href="https://map.naver.com/p/search/%EC%82%AC%EB%8B%B9%EC%97%AD" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🥪 舍堂站輕食</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">13:00 – 15:30</span>
-      <span class="item-title">💆 舍堂一美醫美 <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B0%88%EA%B5%AC%20%EB%B0%A9%EB%B0%B0%EC%B2%A3%EB%A1%9C2%EA%B8%B8%2010" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">💆 舍堂一美醫美</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">17:00 – 19:00</span>
-      <span class="item-title">🛒 樂天超市 首爾站店 <a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A7%88%ED%8A%B8%20%EC%84%9C%EC%9A%B8%EC%97%AD%EC%A1%90" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">🛒 樂天超市 首爾站店</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">20:00</span>
@@ -394,13 +419,76 @@
     </li>
     <li class="timeline-item">
       <span class="time-badge">07:20</span>
-      <span class="item-title">抵達仁川機場 T1 <a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%B3%EA%B3%B0%ED%95%AD" class="naver-btn" target="_blank">Naver Map</a></span>
+      <span class="item-title">抵達仁川機場 T1</span>
     </li>
     <li class="timeline-item">
       <span class="time-badge">09:05</span>
       <span class="item-title">✈️ 起飛返回台灣</span>
     </li>
   </ul>
+</div>
+
+<!-- 口袋美食與備選清單 -->
+<div class="section-title">🍽️ 口袋美食清單 (依地點便利性分類備選)</div>
+
+<div class="food-category">
+  <h3>🏠 1. 住宿地點（鷹岩站 610）附近美食</h3>
+  <div class="food-item">
+    <span class="food-name">청년다방 Eungam 易買得店（青年茶館 辣炒年糕）</span>
+    <a href="https://map.naver.com/p/search/%EC%B2%AD%EB%85%84%EB%8B%A4%EB%B0%A9%20%EC%9D%91%EC%95%94%EC%9D%B4%EB%A7%88%ED%8A%B8%EC%A0%90" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 離磚石酒店超近！推薦奶油醬/長條年糕＋薯條，適合晚上回飯店前吃宵夜或外帶。</p>
+  </div>
+</div>
+
+<div class="food-category">
+  <h3>🚇 2. 新村 / 合井區（地鐵 6 號線直達或順路）</h3>
+  <div class="food-item">
+    <span class="food-name">공릉닭한마리（孔陵一隻雞 新村店）</span>
+    <a href="https://naver.me/xeFgZCoT" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 新村站 240。湯頭鮮美，最後一定要加點海苔雞蛋粥！</p>
+  </div>
+  <div class="food-item">
+    <span class="food-name">소신이쏘 신촌본점（Sosinisso 奶油辣燉排骨 新村總店）</span>
+    <a href="https://naver.me/5Neo4Sq3" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 新村站 240。招牌奶油辣燉排骨（크림매운갈비찜），濃郁濃香必吃！</p>
+  </div>
+  <div class="food-item">
+    <span class="food-name">썬키친（Sun 廚房 合井店）</span>
+    <a href="https://naver.me/5FDRWg9t" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 合井站 622（6號線直達）。創新韓式餐酒館，氣氛極佳。</p>
+  </div>
+</div>
+
+<div class="food-category">
+  <h3>🛍️ 3. 聖水 / 江南區（Day 2 順路替換）</h3>
+  <div class="food-item">
+    <span class="food-name">노스 성수점（Noseu 聖水店）</span>
+    <a href="https://naver.me/GzdqT4d4" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 聖水站 211。時尚韓式餐廳/餐酒，適合 Day 2 晚餐替換或微醺小酌。</p>
+  </div>
+  <div class="food-item">
+    <span class="food-name">능동미나리（능동水芹菜湯飯 聖水總店）</span>
+    <a href="https://map.naver.com/p/search/%EB%8A%A5%EB%8F%99%EB%AF%B8%EB%82%98%EB%A6%AC%20%EC%84%B1%EC%88%98" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 聖水站。超狂爆款水芹菜生牛肉湯飯/牛肉鍋，聖水必吃熱門店。</p>
+  </div>
+</div>
+
+<div class="food-category">
+  <h3>🍜 4. 特色冷麵 & 醬蟹備選（連鎖 / 捷運可達）</h3>
+  <div class="food-item">
+    <span class="food-name">을밀대（乙密台 平壤冷麵總店）</span>
+    <a href="https://map.naver.com/p/search/%EC%9D%84%EB%B0%80%EB%8C%80" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 麻浦/大興站附近（離6號線近）。首爾三大平壤冷麵名店之一。</p>
+  </div>
+  <div class="food-item">
+    <span class="food-name">육쌈냉면（肉包冷麵 - 首爾各大連鎖）</span>
+    <p class="item-desc">📍 明洞/弘大/東大門皆有分店。點冷麵就送炭烤豬肉，CP值高。</p>
+  </div>
+  <div class="food-item">
+    <span class="food-name">일미간장게장（日味醬蟹 長漢坪店）</span>
+    <a href="https://naver.me/GKIXiBrJ" class="naver-btn" target="_blank">Naver Map</a>
+    <p class="item-desc">📍 長漢坪站 543。24小時營業老字號醬油醃蟹，蟹黃極其豐富。</p>
+  </div>
 </div>
 
 <!-- 可勾選與自動儲存行李清單 -->
@@ -506,25 +594,19 @@
 </div>
 
 <script>
-  // 自動儲存勾選狀態至 LocalStorage
   document.addEventListener("DOMContentLoaded", function() {
     const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
-    
-    // 讀取紀錄
     checkboxes.forEach(cb => {
       const savedState = localStorage.getItem(cb.id);
       if (savedState === 'true') {
         cb.checked = true;
       }
-      
-      // 監聽勾選變更
       cb.addEventListener('change', function() {
         localStorage.setItem(cb.id, this.checked);
       });
     });
   });
 
-  // 重置按鈕功能
   function clearChecklist() {
     if (confirm("確定要重置並清空所有已勾選的行李項目嗎？")) {
       const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
