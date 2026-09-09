@@ -22,7 +22,7 @@
     color: #ffffff;
     padding: 24px;
     border-radius: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   }
   .hero-header h1 {
@@ -34,13 +34,21 @@
     font-size: 14px;
     opacity: 0.9;
   }
+  .hotel-box {
+    background-color: #e7f5ff;
+    border: 1px solid #a5d8ff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
   .section-title {
     font-size: 18px;
     font-weight: bold;
     color: #1e3c72;
     border-left: 5px solid #2a5298;
     padding-left: 10px;
-    margin: 24px 0 16px 0;
+    margin: 28px 0 16px 0;
   }
   .day-card {
     background: #ffffff;
@@ -112,17 +120,60 @@
     color: #495057;
     font-size: 13px;
   }
+
+  /* 行李清單可勾選樣式 */
   .pack-box {
     background: #ffffff;
     border-radius: 8px;
-    padding: 14px;
-    margin-bottom: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
     border: 1px solid #e9ecef;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
   }
   .pack-box h3 {
-    margin: 0 0 8px 0;
-    font-size: 15px;
+    margin: 0 0 12px 0;
+    font-size: 16px;
     color: #2b8a3e;
+    border-bottom: 2px solid #f1f3f5;
+    padding-bottom: 6px;
+  }
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px 12px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #343a40;
+    cursor: pointer;
+    user-select: none;
+  }
+  .check-item input {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #2b8a3e;
+    cursor: pointer;
+  }
+  .check-item input:checked + span {
+    text-decoration: line-through;
+    color: #adb5bd;
+  }
+  .reset-btn {
+    background-color: #fa5252;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .reset-btn:hover {
+    background-color: #e03131;
   }
 </style>
 </head>
@@ -131,7 +182,12 @@
 
 <div class="hero-header">
   <h1>🇰🇷 韓國首爾 6天5夜完整行程網頁指南</h1>
-  <p>🗓️ 出發日期：2026/09/17 (四) – 09/22 (二) | 附 Naver 地圖連結 & 行李清單</p>
+  <p>🗓️ 出發日期：2026/09/17 (四) – 09/22 (二) | 附 Naver 地圖連結 & 可勾選儲存行李清單</p>
+</div>
+
+<div class="hotel-box">
+  🏨 <b>全程住宿：磚石酒店 (Bricks Hotel / 브릭스호텔)</b> <a href="https://map.naver.com/p/search/%EB%B8%8C%EB%A6%AD%EC%8A%A4%ED%98%B8%ED%85%8C%EB%A5%B8" class="naver-btn" target="_blank">Naver Map</a><br>
+  📍 交通資訊：近地鐵 6 號線<b>鷹岩站 (610)</b> 1 號/2 號出口約 500m（步行約 7 分鐘）。
 </div>
 
 <div class="section-title">📍 逐日行程指南</div>
@@ -139,19 +195,24 @@
 <!-- DAY 1 -->
 <div class="day-card">
   <div class="day-header">
-    <h2>DAY 1｜9/17 (Thu) 仁川 → 市廳 → 明洞 → Spa Lei</h2>
+    <h2>DAY 1｜9/17 (Thu) 仁川 → 磚石酒店 → 市廳 → 明洞 → Spa Lei</h2>
     <span class="day-tag">抵達與放鬆</span>
   </div>
   <ul class="timeline">
     <li class="timeline-item">
       <span class="time-badge">15:35 – 17:00</span>
       <span class="item-title">抵達仁川機場 T1 <a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%B3%EA%B3%B0%ED%95%AD%201%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90" class="naver-btn" target="_blank">Naver Map</a></span>
-      <p class="item-desc">入境＋領行李，搭 AREX 前往住宿 Check-in。</p>
+      <p class="item-desc">入境＋領行李，搭 AREX 至孔德站轉乘 6 號線至鷹岩站。</p>
+    </li>
+    <li class="timeline-item">
+      <span class="time-badge">17:30 – 18:15</span>
+      <span class="item-title">🏨 磚石酒店 Check-in <a href="https://map.naver.com/p/search/%EB%B8%8C%EB%A6%AD%EC%8A%A4%ED%98%B8%ED%85%8C%EB%A5%B8" class="naver-btn" target="_blank">Naver Map</a></span>
+      <p class="item-desc">放置行李、稍作休息整理，準備出門吃晚餐。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">18:30 – 19:30</span>
       <span class="item-title">🍜 진주회관（晉州會館）<a href="https://map.naver.com/p/search/%EC%A2%8B%EC%A3%BC%ED%9A%8C%EA%B4%80" class="naver-btn" target="_blank">Naver Map</a></span>
-      <p class="item-desc">推薦必點：콩국수（冷豆漿麵 ⭐⭐⭐⭐⭐）。</p>
+      <p class="item-desc">必點：콩국수（冷豆漿麵 ⭐⭐⭐⭐⭐）。</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">19:30 – 21:00</span>
@@ -163,6 +224,10 @@
       <span class="item-title">♨️ Spa Lei 女子汗蒸幕 <a href="https://map.naver.com/p/search/Spa%20Lei" class="naver-btn" target="_blank">Naver Map</a></span>
       <p class="item-desc">泡澡、汗蒸，放鬆飛機產生的疲勞。</p>
     </li>
+    <li class="timeline-item">
+      <span class="time-badge">23:30</span>
+      <span class="item-title">🛏️ 返回磚石酒店休息</span>
+    </li>
   </ul>
 </div>
 
@@ -173,6 +238,10 @@
     <span class="day-tag">時尚與咖啡</span>
   </div>
   <ul class="timeline">
+    <li class="timeline-item">
+      <span class="time-badge">09:15</span>
+      <span class="item-title">🏨 磚石酒店出發</span>
+    </li>
     <li class="timeline-item">
       <span class="time-badge">10:00 – 11:00</span>
       <span class="item-title">🥐 Artist Bakery 新沙店 <a href="https://map.naver.com/p/search/Artist%20Bakery" class="naver-btn" target="_blank">Naver Map</a></span>
@@ -198,6 +267,10 @@
       <span class="item-title">🍚 난포（難浦 Nanpo）<a href="https://map.naver.com/p/search/%EB%82%9C%ED%8F%AC%20%EC%84%B1%EC%88%98" class="naver-btn" target="_blank">Naver Map</a></span>
       <p class="item-desc">大醬包飯、洗酵辛奇泡菜捲。</p>
     </li>
+    <li class="timeline-item">
+      <span class="time-badge">20:30</span>
+      <span class="item-title">🛏️ 返回磚石酒店休息</span>
+    </li>
   </ul>
 </div>
 
@@ -208,6 +281,10 @@
     <span class="day-tag">傳統歷史與美食</span>
   </div>
   <ul class="timeline">
+    <li class="timeline-item">
+      <span class="time-badge">08:00</span>
+      <span class="item-title">🏨 磚石酒店出發</span>
+    </li>
     <li class="timeline-item">
       <span class="time-badge">08:30 – 09:30</span>
       <span class="item-title">🥯 London Bagel Museum 安國 <a href="https://map.naver.com/p/search/London%20Bagel%20Museum%20Anguk" class="naver-btn" target="_blank">Naver Map</a></span>
@@ -228,6 +305,10 @@
       <span class="time-badge">17:00 – 20:00</span>
       <span class="item-title">🥢 廣藏市場 Food Hopping <a href="https://map.naver.com/p/search/%EA%B4%91%EC%9E%A5%EC%8B%9C%EC%9E%A5" class="naver-btn" target="_blank">Naver Map</a></span>
     </li>
+    <li class="timeline-item">
+      <span class="time-badge">20:30</span>
+      <span class="item-title">🛏️ 返回磚石酒店休息</span>
+    </li>
   </ul>
 </div>
 
@@ -239,6 +320,10 @@
   </div>
   <ul class="timeline">
     <li class="timeline-item">
+      <span class="time-badge">09:50</span>
+      <span class="item-title">🏨 磚石酒店出發</span>
+    </li>
+    <li class="timeline-item">
       <span class="time-badge">10:30 – 12:00</span>
       <span class="item-title">🏯 德壽宮石牆路 <a href="https://map.naver.com/p/search/%EB%8D%95%EC%88%98%EA%B6%81" class="naver-btn" target="_blank">Naver Map</a></span>
     </li>
@@ -249,10 +334,15 @@
     <li class="timeline-item">
       <span class="time-badge">16:00 – 18:00</span>
       <span class="item-title">🛍️ 望遠市場 <a href="https://map.naver.com/p/search/%EB%A7%9B%EC%9B%90%EC%8B%9C%EC%9E%A5" class="naver-btn" target="_blank">Naver Map</a></span>
+      <p class="item-desc">6 號線直達望遠站！</p>
     </li>
     <li class="timeline-item">
       <span class="time-badge">18:00 – 20:30</span>
       <span class="item-title">🌅 望遠漢江公園野餐 <a href="https://map.naver.com/p/search/%EB%A7%9B%EC%9B%90%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90" class="naver-btn" target="_blank">Naver Map</a></span>
+    </li>
+    <li class="timeline-item">
+      <span class="time-badge">21:00</span>
+      <span class="item-title">🛏️ 返回磚石酒店休息</span>
     </li>
   </ul>
 </div>
@@ -260,10 +350,14 @@
 <!-- DAY 5 -->
 <div class="day-card">
   <div class="day-header">
-    <h2>DAY 5｜9/21 (Mon) Starfield 水原 → 舍堂醫美 → 首爾站 Lotte Mart</h2>
+    <h2>DAY 5｜9/21 (Mon) Starfield Suwon → 舍堂醫美 → 首爾站 Lotte Mart</h2>
     <span class="day-tag">時間精準日</span>
   </div>
   <ul class="timeline">
+    <li class="timeline-item">
+      <span class="time-badge">08:15</span>
+      <span class="item-title">🏨 磚石酒店出發</span>
+    </li>
     <li class="timeline-item">
       <span class="time-badge">09:30 – 11:00</span>
       <span class="item-title">⭐ Starfield Suwon 星空圖書館 <a href="https://map.naver.com/p/search/Starfield%20Suwon" class="naver-btn" target="_blank">Naver Map</a></span>
@@ -280,18 +374,26 @@
       <span class="time-badge">17:00 – 19:00</span>
       <span class="item-title">🛒 樂天超市 首爾站店 <a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A7%88%ED%8A%B8%20%EC%84%9C%EC%9A%B8%EC%97%AD%EC%A1%90" class="naver-btn" target="_blank">Naver Map</a></span>
     </li>
+    <li class="timeline-item">
+      <span class="time-badge">20:00</span>
+      <span class="item-title">🛏️ 返回磚石酒店整理戰利品與行李</span>
+    </li>
   </ul>
 </div>
 
 <!-- DAY 6 -->
 <div class="day-card">
   <div class="day-header">
-    <h2>DAY 6｜9/22 (Tue) 仁川機場 → 台灣</h2>
+    <h2>DAY 6｜9/22 (Tue) 磚石酒店 退房 → 仁川機場 → 台灣</h2>
     <span class="day-tag">返程</span>
   </div>
   <ul class="timeline">
     <li class="timeline-item">
-      <span class="time-badge">07:30</span>
+      <span class="time-badge">05:40</span>
+      <span class="item-title">🏨 磚石酒店 Check-out 退房</span>
+    </li>
+    <li class="timeline-item">
+      <span class="time-badge">07:20</span>
       <span class="item-title">抵達仁川機場 T1 <a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%B3%EA%B3%B0%ED%95%AD" class="naver-btn" target="_blank">Naver Map</a></span>
     </li>
     <li class="timeline-item">
@@ -301,26 +403,137 @@
   </ul>
 </div>
 
-<div class="section-title">🧳 行李清單 & 穿搭建議</div>
+<!-- 可勾選與自動儲存行李清單 -->
+<div class="section-title">🧳 互動式行李打包清單 (自動儲存勾選狀態)</div>
 
 <div class="pack-box">
-  <h3>👚 上衣與下身</h3>
-  <ul>
-    <li>短袖 T-shirt × 3 + 質感短袖 × 2</li>
-    <li>薄長袖上衣 / 襯衫 × 2 + 薄針織/Cardigan × 1</li>
-    <li>牛仔褲 × 1 + 黑色長褲 × 1 + 休閒長褲/長裙 × 2</li>
-  </ul>
+  <h3>👚 衣物與穿搭 (Capsule Wardrobe)</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_1"><span>短袖 T-shirt × 3 (白/黑/米)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_2"><span>漂亮/質感短袖上衣 × 2</span></label>
+    <label class="check-item"><input type="checkbox" id="item_3"><span>薄長袖上衣 × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_4"><span>薄襯衫 × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_5"><span>薄針織衫 / Cardigan × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_6"><span>直筒 / 寬鬆牛仔褲 × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_7"><span>黑色 / 深色長褲 × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_8"><span>輕薄休閒長褲 × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_9"><span>半身裙 / 漂亮長裙 × 1</span></label>
+    <label class="check-item"><input type="checkbox" id="item_10"><span>睡衣 / 居家服</span></label>
+    <label class="check-item"><input type="checkbox" id="item_11"><span>內衣褲 / 襪子</span></label>
+  </div>
 </div>
 
 <div class="pack-box">
-  <h3>🧥 外套與鞋包</h3>
-  <ul>
-    <li>輕薄西裝外套 (Lightweight Blazer) 或 短版 Structured Jacket</li>
-    <li>舒適球鞋 × 1 + Loafers/Ballet flats × 1</li>
-    <li>斜背包 (Crossbody Bag)</li>
-  </ul>
+  <h3>🧥 外套類 (應付 9 月日夜溫差)</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_12"><span>Lightweight Blazer (西裝外套)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_13"><span>短版 Structured Jacket</span></label>
+    <label class="check-item"><input type="checkbox" id="item_14"><span>薄風衣 Trench coat</span></label>
+  </div>
 </div>
 
+<div class="pack-box">
+  <h3>👟 鞋子 & 包包</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_15"><span>⭐ 舒適 Sneakers (NB/Asics/Nike)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_16"><span>Loafers / 瑪莉珍 / 樂福鞋</span></label>
+    <label class="check-item"><input type="checkbox" id="item_17"><span>拖鞋 / 飯店內穿鞋</span></label>
+    <label class="check-item"><input type="checkbox" id="item_18"><span>Crossbody Bag 斜背包 (隨身)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_19"><span>小型 Shoulder Bag 肩背包</span></label>
+  </div>
 </div>
+
+<div class="pack-box">
+  <h3>💆 保養、彩妝 & Spa Lei / 醫美專屬</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_20"><span>洗面乳 / 卸妝用品</span></label>
+    <label class="check-item"><input type="checkbox" id="item_21"><span>化妝水 / 精華液 / 乳液面霜</span></label>
+    <label class="check-item"><input type="checkbox" id="item_22"><span>SPF 50+ 防曬乳</span></label>
+    <label class="check-item"><input type="checkbox" id="item_23"><span>彩妝品 (粉餅/眉筆/睫毛膏/腮紅/唇膏)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_24"><span>髮油 / 梳子 / 髮圈 / 髮夾</span></label>
+    <label class="check-item"><input type="checkbox" id="item_25"><span>[醫美後] 鴨舌帽 Cap / 墨鏡</span></label>
+    <label class="check-item"><input type="checkbox" id="item_26"><span>[醫美後] 溫和保濕品 (無酸類)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_27"><span>[醫美後] 口罩 / 溫和濕紙巾</span></label>
+    <label class="check-item"><input type="checkbox" id="item_28"><span>[Spa Lei] 換洗衣物小袋</span></label>
+    <label class="check-item"><input type="checkbox" id="item_29"><span>[Spa Lei] 隱眼盒 / 藥水 / 個人護髮</span></label>
+  </div>
+</div>
+
+<div class="pack-box">
+  <h3>💊 常備藥品 & 個人衛生用品</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_30"><span>個人固定服用藥物</span></label>
+    <label class="check-item"><input type="checkbox" id="item_31"><span>止痛藥 / 退燒藥</span></label>
+    <label class="check-item"><input type="checkbox" id="item_32"><span>腸胃藥 / 止瀉藥</span></label>
+    <label class="check-item"><input type="checkbox" id="item_33"><span>暈車 / 暈機藥</span></label>
+    <label class="check-item"><input type="checkbox" id="item_34"><span>感冒藥 / OK 繃 / 酒精棉片</span></label>
+    <label class="check-item"><input type="checkbox" id="item_35"><span>牙刷 / 牙膏 / 牙線</span></label>
+    <label class="check-item"><input type="checkbox" id="item_36"><span>小包面紙 / 濕紙巾 / 乾洗手</span></label>
+    <label class="check-item"><input type="checkbox" id="item_37"><span>個人女性衛生用品</span></label>
+    <label class="check-item"><input type="checkbox" id="item_38"><span>小毛巾 / 手帕 / 折疊水瓶</span></label>
+  </div>
+</div>
+
+<div class="pack-box">
+  <h3>🔌 3C 電器 & 天氣隨身用品</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_39"><span>手機 & 手機充電線</span></label>
+    <label class="check-item"><input type="checkbox" id="item_40"><span>⭐ 行動電源 (Powerbank)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_41"><span>韓國轉接頭 (Type C/F 220V)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_42"><span>AirPods / 耳機 & 充電線</span></label>
+    <label class="check-item"><input type="checkbox" id="item_43"><span>Apple Watch & 專用充電器</span></label>
+    <label class="check-item"><input type="checkbox" id="item_44"><span>⭐ 便攜折疊傘 (9月防雨)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_45"><span>太陽眼鏡 (Sunglasses)</span></label>
+  </div>
+</div>
+
+<div class="pack-box">
+  <h3>💳 證件、錢幣 & App 準備</h3>
+  <div class="checkbox-group">
+    <label class="check-item"><input type="checkbox" id="item_46"><span>護照 (Passport)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_47"><span>居留證 (ARC / Residence Permit)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_48"><span>信用卡 × 2 (海外刷卡回饋)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_49"><span>韓元現金 (Cash)</span></label>
+    <label class="check-item"><input type="checkbox" id="item_50"><span>T-money 交通卡</span></label>
+    <label class="check-item"><input type="checkbox" id="item_51"><span>韓國 eSIM 已設定安裝</span></label>
+    <label class="check-item"><input type="checkbox" id="item_52"><span>已下載 Naver Map App</span></label>
+    <label class="check-item"><input type="checkbox" id="item_53"><span>已下載 Papago 翻譯 App</span></label>
+  </div>
+</div>
+
+<button class="reset-btn" onclick="clearChecklist()">🔄 清空所有勾選</button>
+
+</div>
+
+<script>
+  // 自動儲存勾選狀態至 LocalStorage
+  document.addEventListener("DOMContentLoaded", function() {
+    const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
+    
+    // 讀取紀錄
+    checkboxes.forEach(cb => {
+      const savedState = localStorage.getItem(cb.id);
+      if (savedState === 'true') {
+        cb.checked = true;
+      }
+      
+      // 監聽勾選變更
+      cb.addEventListener('change', function() {
+        localStorage.setItem(cb.id, this.checked);
+      });
+    });
+  });
+
+  // 重置按鈕功能
+  function clearChecklist() {
+    if (confirm("確定要重置並清空所有已勾選的行李項目嗎？")) {
+      const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        cb.checked = false;
+        localStorage.removeItem(cb.id);
+      });
+    }
+  }
+</script>
 </body>
 </html>
